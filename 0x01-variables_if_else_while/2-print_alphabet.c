@@ -18,8 +18,8 @@ int main(void)
 	while (alpha[i] != '\0')
 	{
 		putchar(alpha[i]);
-		putchar('\n');
 		i++;
 	}
+	putchar('\n');
 	return (0);
 }
