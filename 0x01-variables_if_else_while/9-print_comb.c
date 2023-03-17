@@ -10,13 +10,16 @@
  */
 int main(void)
 {
-	char low;
-	char upper;
+	int i;
 
-	for (low = 'a'; low <= 'z'; low++)
+	for (i = '0'; i <= '9'; i++)
 	{
-		if (low != 'e' || 'q')
-			putchar(low);
+		putchar(i);
+		if (i != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
