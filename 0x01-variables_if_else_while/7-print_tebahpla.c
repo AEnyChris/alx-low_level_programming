@@ -13,7 +13,7 @@ int main(void)
 	char *alpha;
 	int i;
 
-	alpha = "zyxwvutsrqponmlkjihgfecba";
+	alpha = "zyxwvutsrqponmlkjihgfedcba";
 	i = 0;
 	while (alpha[i] != '\0')
 	{
