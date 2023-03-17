@@ -18,9 +18,9 @@ int main(void)
 	mod = n % 10;
 	if (mod > 5)
 		printf("Last digit of %i is %i and is greater than 5\n", n, mod);
-	if (mod == 0)
+	else if (mod == 0)
 		printf("Last digit of %i is %i and is 0\n", n, mod);
-	if (mod < 6)
+	else
 		printf("Last digit of %i is %i and is less than 6 and not 0\n", n, mod);
 	return (0);
 }
