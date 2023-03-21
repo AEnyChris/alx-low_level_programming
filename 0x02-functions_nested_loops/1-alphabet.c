@@ -1,25 +1,19 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- *main - Entry point
+ * print_alphabet - print_alpahbet function
  *
- *Return: 0 if successful
+ * Description: It prints alphabet in lowercase followed by a new line.
  *
+ * Return: returns alpha of type char
  */
 
-int main(void)
-{
-	char *alpha;
-	int i;
 
-	alpha = "abcdefghijklmnopqrstuvwxyz";
-	i = 0;
-	while (alpha[i] != '\0')
-	{
-		_putchar(alpha[i]);
-		i++;
-	}
+void print_alphabet(void)
+{
+	char i;
+
+	for (i = 'a'; i <= 'z'; i++)
+		_putchar(i);
 	_putchar('\n');
-	return (0);
 }
