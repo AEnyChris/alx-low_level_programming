@@ -5,5 +5,5 @@
 
 int _putchar(char c);
 
-void putformat(int n);
+void print_alpahbet(void);
 #endif
