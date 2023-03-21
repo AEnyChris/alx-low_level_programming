@@ -5,5 +5,5 @@
 
 int _putchar(char c);
 
-void print_alpahbet(void);
+void print_alphabet(void);
 #endif
