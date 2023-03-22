@@ -10,7 +10,7 @@
  * Return: 1 if true. 0 if not
  */
 
-int _abs(int)
+int _abs(int x)
 {
 	if (abs(x))
 		return (1);
