@@ -2,18 +2,15 @@
 #include <stdlib.h>
 
 /**
- * _isalpha - Entry point
- *@c: character to be checked
+ * _abs - Entry point
+ *@i: character to be checked
  *
- * Description: check character if letter
+ * Description: compute absolute value of an integer
  *
- * Return: 1 if true. 0 if not
+ * Return: absolute value of integer
  */
 
-int _abs(int)
+int _abs(int i)
 {
-	int ret;
-
-	ret = abs(c);
-	return (ret);
+	return (abs(i));
 }
