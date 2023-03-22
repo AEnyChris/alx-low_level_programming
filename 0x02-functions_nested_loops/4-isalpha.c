@@ -1,19 +1,18 @@
 #include "main.h"
-#include <stdlib.h>
+#include <ctype.h>
 
 /**
- * _abs - Entry point
- *@x: character to be checked
+ * _isalpha - checks for alphabetic character
  *
- * Description: check character if letter
+ * @c: a character
  *
- * Return: 1 if true. 0 if not
+ * Return: 1 or 0 otherwise
  */
-
-int _abs(int x)
+int _isalpha(int c)
 {
-	if (abs(x))
+	char i = (int)c;
+
+	if (isalpha(i))
 		return (1);
-	else
-		return (0);
+	return (0);
 }

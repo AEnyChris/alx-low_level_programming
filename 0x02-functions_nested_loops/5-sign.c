@@ -28,9 +28,3 @@ int print_sign(int n)
 		return (-1);
 	}
 }
-
-int main(void)
-{
-	print_sign(-34);
-	return (0);
-}
