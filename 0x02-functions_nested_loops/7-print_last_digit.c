@@ -1,8 +1,9 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * print_last_digit - Entry point
- *@i: character to be checked
+ *@n: character to be checked
  *
  * Description: return the value of the last digit
  *
@@ -13,6 +14,6 @@ int print_last_digit(int n)
 {
 	int i = abs(n % 10);
 
-	_putchar(48 + i)
+	_putchar(48 + i);
 	return (i);
 }
