@@ -9,7 +9,7 @@
  * Return: last digit of integer
  */
 
-int print_last_digit(int i)
+int print_last_digit(int n)
 {
 	int i = abs(n % 10);
 
