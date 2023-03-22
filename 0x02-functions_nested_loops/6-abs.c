@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
- * _abs - Entry point
- *@x: character to be checked
+ * _isalpha - Entry point
+ *@c: character to be checked
  *
  * Description: check character if letter
  *
@@ -12,8 +12,8 @@
 
 int _abs(int)
 {
-	if (abs(x))
-		return (1);
-	else
-		return (0);
+	int ret;
+
+	ret = abs(c);
+	return (ret);
 }

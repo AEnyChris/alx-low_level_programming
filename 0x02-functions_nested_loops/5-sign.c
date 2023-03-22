@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_sign - Entry point
@@ -13,17 +14,23 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-		_putchar('+');
+		putchar('+');
 		return (1);
 	}
 	else if (n == 0)
 	{
-		_putchar('0');
+		putchar('0');
 		return (0);
 	}
 	else
 	{
-		_putchar('-');
+		putchar('-');
 		return (-1);
 	}
+}
+
+int main(void)
+{
+	print_sign(-34);
+	return (0);
 }
