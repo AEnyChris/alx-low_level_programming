@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+/**
+ *fibonacci - prints the fibonacci sequence
+ *@limit: limit of the sequence to stop
+ *
+ * Description: prints the fibonacci sequence up to
+ * specified limit variable as described above
+ *
+ * Return: limit number of fibonacci sequence
+ */
+
+void fibonacci(int limit)
+{
+	int i, t1, t2, nextTerm;
+
+	t1 = 0;
+	t2 = 1;
+	printf("%d %d ", t1, t2);
+	nextTerm = t1 + t2;
+	while (nextTerm <= limit)
+	{
+		printf("%d ", nextTerm);
+		t1 = t2;
+		t2 = nextTerm;
+		nextTerm = t1 + t2;
+	}
+}
+
+/**
+ *main - Entry point
+ *
+ * Description: program starts to here
+ *
+ * Return: 0 when succesful
+ */
+
+int main(void)
+{
+	int limit = 100; /* Maximum limit of the Fibonacci sequence to be printed*/
+
+	fibonacci(limit);
+	return (0);
+}
