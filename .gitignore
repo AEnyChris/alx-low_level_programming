@@ -6,3 +6,4 @@ main.c
 9-times_table
 test.c
 10-add
+./0x03-debugging/positive_negative.c
