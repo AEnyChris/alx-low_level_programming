@@ -12,18 +12,20 @@
 
 void fibonacci(int limit)
 {
-	int t1, t2, nextTerm;
+	int i, t1, t2, nextTerm;
 
-	t1 = 0;
-	t2 = 1;
+	i = 1;
+	t1 = 1;
+	t2 = 2;
 	printf("%d %d ", t1, t2);
 	nextTerm = t1 + t2;
-	while (nextTerm <= limit)
+	while (i <= limit)
 	{
 		printf("%d ", nextTerm);
 		t1 = t2;
 		t2 = nextTerm;
 		nextTerm = t1 + t2;
+		i++;
 	}
 }
 
