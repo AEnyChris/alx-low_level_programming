@@ -12,7 +12,7 @@
 
 void fibonacci(int limit)
 {
-	int i, t1, t2, nextTerm;
+	int t1, t2, nextTerm;
 
 	t1 = 0;
 	t2 = 1;
@@ -37,7 +37,7 @@ void fibonacci(int limit)
 
 int main(void)
 {
-	int limit = 100; /* Maximum limit of the Fibonacci sequence to be printed*/
+	int limit = 98; /* Maximum limit of the Fibonacci sequence to be printed*/
 
 	fibonacci(limit);
 	return (0);
