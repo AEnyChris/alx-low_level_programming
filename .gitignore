@@ -2,3 +2,6 @@ text.c
 _putchar.c
 ./0x02-functions_nested_loops/_putchar.c
 test.c
+main.c
+9-times_table
+test.c
