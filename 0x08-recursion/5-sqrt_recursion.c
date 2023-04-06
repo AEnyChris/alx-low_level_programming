@@ -11,6 +11,7 @@
 int test(int n, int guess)
 {
 	int root = (guess + n / guess) / 2;
+
 	if (((root * root) - n) == 0)
 	{
 		return (root);
