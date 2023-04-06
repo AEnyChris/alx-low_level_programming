@@ -1,31 +1,42 @@
-#include "main.h"
 
 /**
- * is_prime_number - check for prime number
- * @n: integer number to be checked
+ * test - helper function to is_prime_number
+ * @n: number to test on integer
+ * @div: divisor to test n with
+ *
+ * Return: 1 if test is true. 0 otherwise
+ */
+
+int test(int n, int div)
+{
+	if (div == 1)
+	{
+		return (1);
+	}
+	else if (n % div == 0)
+	{
+		return (0);
+	}
+	return (test(n, div - 1));
+}
+/**
+ * is_prime_number - test for prime numbers
+ * @n: number to test
  *
  *
- * Return: 1 if prime number. 0 otherwise
+ * Return: 1 if test is true. 0 otherwise
  */
 
 int is_prime_number(int n)
 {
-	int i;
-
-	if (n == 2 || n == 3)
-	{
-		return (1);
-	}
-	if (n < 1 || n % 2 == 0 || n % 3 == 0)
+	if (n <= 1)
 	{
 		return (0);
 	}
-	for (i = 5; i * i <= n; i += 6)
+	else if (n == 2 || n == 3 || n == 5)
 	{
-		if (n % i == 0 || n % (i + 2) == 0)
-		{
-			return (0);
-		}
+		return (1);
 	}
-	return (1);
+	else
+		return(test(n, n - 1));
 }
