@@ -3,13 +3,14 @@
 /**
  * test - helper function to sqrt_recursion
  * @n: integer to find the root of
- * @root: guess numbers for root
+ * @guess: guess numbers for root
  *
  *
  * Return: the square root of n an integer
  */
-int test(int n, int root)
+int test(int n, int guess)
 {
+	int root = (guess + n / guess) / 2;
 	if (((root * root) - n) == 0)
 	{
 		return (root);
@@ -18,7 +19,7 @@ int test(int n, int root)
 	{
 		return (-1);
 	}
-	return (test(n, root - 1));
+	return (test(n, root));
 }
 
 
@@ -31,13 +32,13 @@ int test(int n, int root)
 
 int _sqrt_recursion(int n)
 {
-	int root;
+	int guess;
 
 	if (n == 1)
 	{
-		root = n;
+		guess = n;
 	}
 	else
-		root = n / 2;
-	return (test(n, root));
+		guess = n / 2;
+	return (test(n, guess));
 }
