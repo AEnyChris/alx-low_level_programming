@@ -1,6 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+
+/**
+ * is_number - check if string contains letter
+ * @s: string to be checked
+ *
+ * Return: 0 if true. 1 otherwise
+ */
+
+int is_number(char *s)
+{
+
+	int flag;
+	unsigned int j;
+
+	for (j = 0; j < strlen(s); j++)
+	{
+		if (s[j] >= '0' && s[j] <= '9')
+		{
+			flag = 1;
+		}
+		else
+		{
+			flag = 0;
+			break;
+		}
+	}
+	return (flag);
+}
+
 /**
  * main - Entry point of programme
  * @argc: count of arguments
@@ -11,8 +41,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, flag;
-	unsigned int j;
+	int i;
 	int sum = 0;
 
 	if (argc == 1)
@@ -23,19 +52,7 @@ int main(int argc, char *argv[])
 	else
 		for (i = 1; i < argc; i++)
 		{
-			for (j = 0; j < strlen(argv[i]); j++)
-			{
-				if (argv[i][j] >= '0' && argv[i][j] <= '9')
-				{
-					flag = 1;
-				}
-				else
-				{
-					flag = 0;
-					break;
-				}
-			}
-			if (flag == 1)
+			if (is_number(argv[i]))
 			{
 				sum += atoi(argv[i]);
 			}
