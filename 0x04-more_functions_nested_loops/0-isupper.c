@@ -14,5 +14,5 @@ int _isupper(int c)
 
 	if (isupper(i))
 		return (1);
-	return (0);
+	return (0); /* Final return value */
 }
