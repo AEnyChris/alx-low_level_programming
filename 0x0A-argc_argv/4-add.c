@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <ctype.h>
 
 /**
  * is_number - check if string contains letter
  * @s: string to be checked
  *
- * Return: 0 if true. 1 otherwise
+ * Return: flag - 1 if true and 0 otherwise
  */
 
 int is_number(char *s)
@@ -18,7 +18,7 @@ int is_number(char *s)
 
 	for (j = 0; j < strlen(s); j++)
 	{
-		if (s[j] >= '0' && s[j] <= '9')
+		if (isdigit(s[j]))
 		{
 			flag = 1;
 		}
