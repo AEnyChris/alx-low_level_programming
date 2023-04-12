@@ -1,4 +1,6 @@
+#include <stdlib.h>
 #include <string.h>
+#include <stddef.h>
 
 /**
  * _strdup - returns a pointer to a copied string
@@ -9,5 +11,21 @@
 
 char *_strdup(char *str)
 {
-	return (strdup(str));
+	char *ar;
+	unsigned int i;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	ar = malloc(sizeof(char) * (strlen(str) + 1));
+	if (ar == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i <= strlen(str); i++)
+	{
+		ar[i] = str[i];
+	}
+	return (ar);
 }
