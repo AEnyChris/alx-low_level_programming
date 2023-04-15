@@ -10,9 +10,9 @@
  * Return: pointer to  allocated memory or exit(98)
  */
 
-void *_calloc(unsigned nmemb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *pointer;	
+	void *pointer;
 
 	if (nmemb == 0 || size == 0)
 	{
