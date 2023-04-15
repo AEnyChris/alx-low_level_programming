@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = strlen(s2);
 	}
-	ar = malloc(sizeof(char) * (strlen(s1) + n + 1));
+	ar = malloc(sizeof(char) * (strlen(s1) + n));
 	if (ar == NULL)
 		return (NULL);
 	for (i = 0; i < strlen(s1); i++)
