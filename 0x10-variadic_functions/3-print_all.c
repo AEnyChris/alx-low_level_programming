@@ -15,9 +15,9 @@ void print_all(const char *const format, ...)
 	char *space = "";
 	char *tmps;
 
-
 	va_start(ar, format);
-
+	if (format)
+	{
 	while (format[i])
 	{
 		switch (format[i])
@@ -45,6 +45,7 @@ void print_all(const char *const format, ...)
 		}
 		space = ", ";
 		i++;
+	}
 	}
 
 	va_end(ar);
