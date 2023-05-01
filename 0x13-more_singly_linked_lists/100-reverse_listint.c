@@ -10,20 +10,16 @@
  */
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *temp;
+	listint_t *temp = NULL;
 	listint_t *safe;
 
-	temp = *head;
-	safe = (temp->next)->next; /*keeping N2 safe*/
-	(temp->next)->next = *head;
-	*head = temp->next;
-	temp->next = NULL;
-	while (safe)
+	while (*head)
 	{
-		temp = safe;
-		safe = temp->next;
-		temp->next = *head;
-		*head = temp;
+		safe = *head->next;
+		*head->next = temp;
+		temp = *head;
+		*head = safe;
 	}
+	*head = safe
 	return (*head);
 }
