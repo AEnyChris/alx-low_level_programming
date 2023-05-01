@@ -11,15 +11,15 @@
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *temp = NULL;
-	listint_t *safe;
+	listint_t *safe = NULL;
 
 	while (*head)
 	{
-		safe = *head->next;
-		*head->next = temp;
+		safe = (*head)->next;
+		(*head)->next = temp;
 		temp = *head;
 		*head = safe;
 	}
-	*head = safe
+	*head = temp;
 	return (*head);
 }
