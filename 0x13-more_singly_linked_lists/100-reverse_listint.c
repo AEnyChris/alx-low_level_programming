@@ -13,9 +13,6 @@ listint_t *reverse_listint(listint_t **head)
 	listint_t *temp;
 	listint_t *safe;
 
-	if (head == NULL)
-		return (NULL);
-
 	temp = *head;
 	safe = (temp->next)->next; /*keeping N2 safe*/
 	(temp->next)->next = *head;
