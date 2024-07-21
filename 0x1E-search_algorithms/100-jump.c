@@ -42,7 +42,7 @@ int jump_loop(int *array, size_t size, int value)
 
 	printf("Value found between indexes [%lu] and [%lu]\n", a, b);
 
-	while (array[a] < value)
+	while (array[a] < value || array[a] > value)
 	{
 		if (b < size && a == b)
 			return (-1);
