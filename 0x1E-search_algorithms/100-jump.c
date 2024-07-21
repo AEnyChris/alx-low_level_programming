@@ -46,7 +46,7 @@ int jump_loop(int *array, size_t size, int value)
 	{
 		if (b < size && a == b)
 			return (-1);
-		else if (b > size && a == size)
+		else if (b >= size && a == size)
 			return (-1);
 		printf("Value checked array[%lu] = [%i]\n", a, array[a]);
 		a += 1;
@@ -69,7 +69,12 @@ int jump_loop(int *array, size_t size, int value)
 
 int jump_search(int *array, size_t size, int value)
 {
-	size_t a = jump_loop(array, size, value);
+	size_t a;
+
+	if (array == NULL)
+			return (-1);
+
+	a = jump_loop(array, size, value);
 
 	if (array[a] == value)
 	{
