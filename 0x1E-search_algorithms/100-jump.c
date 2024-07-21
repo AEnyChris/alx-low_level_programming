@@ -72,7 +72,7 @@ int jump_search(int *array, size_t size, int value)
 	size_t a;
 
 	if (array == NULL)
-			return (-1);
+		return (-1);
 
 	a = jump_loop(array, size, value);
 
