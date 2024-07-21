@@ -37,7 +37,7 @@ int jump_loop(int *array, size_t size, int value)
 			break;
 	}
 
-	if (b > size)
+	if (b >= size)
 		printf("Value checked array[%lu] = [%i]\n", a, array[a]);
 
 	printf("Value found between indexes [%lu] and [%lu]\n", a, b);
